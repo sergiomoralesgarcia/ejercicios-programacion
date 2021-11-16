@@ -8,13 +8,10 @@
  * @author Sergio Morales García
  */
 public class Ejercicio12 {
-    public static void main(String[] args) {
-      System.out.println("Este programa va a mostrar los n primeros términos de la serie de Fibonacci. ");
-      System.out.println("Introduzca los n priemros números: ");
-      int numeros = Integer.parseInt(System.console().readLine());
+  public static void main(String[] args) {
+    System.out.println("Este programa va a mostrar los n primeros términos de la serie de Fibonacci. ");
+    System.out.println("Introduzca los n priemros números: ");
+    int numeros = Integer.parseInt(System.console().readLine());
 
-      for (int i = numeros; i < numeros + 5; i++) {
-      System.out.printf("%4d %6d %8d\n", i, i * i, i * i * i);
-      }
-    }
-  }
+    
+ 
