@@ -12,6 +12,5 @@ public class Ejercicio20 {
     int altura = Integer.parseInt(System.console().readLine());
     System.out.print("Introduzca el carácter con el que se dibuja la pirámide: ");
     String caracter = System.console().readLine();
-
   }
 }
