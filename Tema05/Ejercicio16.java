@@ -10,3 +10,5 @@ public class Ejercicio16 {
     System.out.println("Este programa calcula si un número introducido por teclado es primo o no. ");
     System.out.println("Introduzca un número: ");
     int numero = Integer.parseInt(System.console().readLine());
+  }
+}

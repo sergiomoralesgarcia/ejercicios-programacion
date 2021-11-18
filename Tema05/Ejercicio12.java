@@ -13,5 +13,5 @@ public class Ejercicio12 {
     System.out.println("Introduzca los n priemros números: ");
     int numeros = Integer.parseInt(System.console().readLine());
 
-    
- 
+  }  
+} 

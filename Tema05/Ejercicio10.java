@@ -19,6 +19,7 @@ public class Ejercicio10 {
       numeroIntroducido = Integer.parseInt(System.console().readLine());;
       numeroDigitos++;
       total += numeroIntroducido;
+      
     }
     System.out.println("La media de todos los numeros positivos introducidos es " + (total / numeroDigitos));
 
