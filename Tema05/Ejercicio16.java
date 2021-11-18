@@ -19,7 +19,7 @@ public class Ejercicio16 {
       } 
     }  
       
-    if (primo){
+    if (primo) {
       System.out.println("El número es primo");
     } else {
       System.out.println("El número no es primo");
