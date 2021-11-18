@@ -11,6 +11,7 @@ public class Ejercicio21 {
     System.out.println("Vaya introduciendo números.");
     System.out.println("Se parará al introducir un número negativo.");
 
+    
     int numeroIntroducido;
     int numeroDigitos = 0;
     int sumaImpares = 0;
