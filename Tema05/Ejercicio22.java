@@ -5,11 +5,7 @@
  */
 public class Ejercicio22 {
   public static void main(String[] args) {
-    System.out.println("Este programa calcula si un número introducido por teclado es primo o no. ");
-    System.out.println("Introduzca el número: ");
-    int numero = Integer.parseInt(System.console().readLine());
-
-    boolean primo = true;
+    System.out.println("Este programa Muestra por pantalla todos los números primos entre 2 y 100. ");
 
     for (int i = 2; i < numero; i++) {
       if ((numero % i) == 0) {
