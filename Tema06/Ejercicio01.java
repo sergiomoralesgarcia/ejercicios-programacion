@@ -1,9 +1,10 @@
 /**
- * Generación de números aleatorios.
+ * Escribe un programa que muestre la tirada de tres dados. Se debe mostrar
+ * también la suma total (los puntos que suman entre los tres dados). 
  *
- * @author Luis José Sánchez
+ * @author Sergio Morales García
  */
-public class Aleatorio07 {
+public class Ejercicio01 {
     public static void main(String[] args) {
       System.out.println("Muestra un día de la semana al azar:");
       
