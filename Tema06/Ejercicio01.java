@@ -6,35 +6,24 @@
  */
 public class Ejercicio01 {
   public static void main(String[] args) {
-    System.out.println("Muestra un día de la semana al azar:");
+    System.out.println("Tira tres dados:");
+    int primero;
+    int segundo;
+    int tercero;
 
-    for (int i = 0; i < 20; i++) {
-      int dia = (int) (Math.random() * 7) + 1; // genera un número aleatorio
-                                               // entre el 1 y el 7
-      switch (dia) {
-      case 1:
-        System.out.println("lunes ");
-        break;
-      case 2:
-        System.out.println("martes ");
-        break;
-      case 3:
-        System.out.println("miércoles ");
-        break;
-      case 4:
-        System.out.println("jueves ");
-        break;
-      case 5:
-        System.out.println("viernes ");
-        break;
-      case 6:
-        System.out.println("sábado ");
-        break;
-      case 7:
-        System.out.println("domingo ");
-        break;
-      default:
+    for (int i = 1; i <= 1; i++) {
+      primero = ((int)(Math.random()*6) + 1 );
+      System.out.println("El primer dado es un " + primero + "  ");
+      for (int c = 1; c <= 1; c++) {
+        segundo = ((int)(Math.random()*6) + 1 );
+        System.out.println("El segundo dado es un " + segundo + "  ");
+        for (int s = 1; s <= 1; s++) {
+          tercero = ((int)(Math.random()*6) + 1 );
+          System.out.println("El tercer dado es un " + tercero + "  ");
+          System.out.println("La suma de los tres dados es " + (primero + segundo + tercero));
+        }
       }
     }
+    System.out.println();
   }
 }
