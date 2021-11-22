@@ -22,6 +22,10 @@ public class Ejercicio07 {
         System.out.println("Lo siento, esa no es la combinación ");
         System.out.print("Introduzca de nuevo la combinación: ");
         combinacion = Integer.parseInt(System.console().readLine());
+
+        if (combinacion == 2222){
+          System.out.println("La caja fuerte se ha abierto satisfactoriamente ");
+        }
       } 
     } while (intentos <= 3);
   }
