@@ -11,13 +11,13 @@ public class Ejercicio010 {
 
     System.out.println("Este programa muestra diez líneas de distintos carácteres y longitud. ");
 
-    int longitud;
+    int largo;
     int caracter;
     String tipoCaracter = "";
 
     for (int i = 1; i <=10 ; i++) {
-      longitud = ((int) (Math.random() * 6));
-      caracter = ((int) (Math.random() * 40) + 1);
+      caracter = ((int) (Math.random() * 6));
+      largo = ((int) (Math.random() * 40) + 1);
 
       switch (caracter) {
         case 0:
@@ -40,10 +40,10 @@ public class Ejercicio010 {
           break;
         default:
         }
+      for(int j = 1; j <= largo; j++) {
+        System.out.print(tipoCaracter);
+      }
+      System.out.println();
     }
-    for(int j = 1; j <= longitud; j++) {
-      System.out.print(tipoCaracter);
-    }
-    System.out.println();
   }
 }
