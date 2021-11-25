@@ -27,7 +27,7 @@ public class Ejercicio010 {
           tipoCaracter = "-";
           break;
         case 2:
-          tipoCaracter = ".";;
+          tipoCaracter = ".";
           break;
         case 3:
           tipoCaracter = "@";
