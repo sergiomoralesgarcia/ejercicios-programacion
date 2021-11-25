@@ -1,11 +1,10 @@
 /**
- * Realiza un generador de melodía con las siguientes condiciones: a) Las notas
- * deben estar generadas al azar. Las 7 notas son do, re, mi, fa, sol, la y si.
+ * Realiza un generador de melodía con las siguientes condiciones: 
+ * a) Las notas deben estar generadas al azar. Las 7 notas son do, re, mi, fa, sol, la y * * si.
  * b) Una melodía está formada por un número aleatorio de notas mayor o igual a
- * 4, menor o igual a 28 y siempre múltiplo de 4 (4, 8, 12…). c) Cada grupo de 4
- * notas será un compás y estará separado del siguiente compás mediante la barra
- * vertical “|” (Alt + 1). El final de la melodía se marca con dos barras. d) La
- * última nota de la melodía debe coincidir con la primera.
+ * 4, menor o igual a 28 y siempre múltiplo de 4 (4, 8, 12…). 
+ * c) Cada grupo de 4notas será un compás y estará separado del siguiente compás mediante  * la barra vertical “|” (Alt + 1). El final de la melodía se marca con dos barras. 
+ * d) La última nota de la melodía debe coincidir con la primera.
  *
  * @author Sergio Morales García
  */
@@ -14,11 +13,12 @@ public class Ejercicio015 {
     System.out.println("Este programa muestra una melodia aleatoria. ");
 
     String nombreNota = "";
+    String primeraNota = "";
+    int largo = 4 * (int) (Math.random() * 7 + 1);
     
-    for (int i = 1; i <= 10; i++) {
+    for (int contador = 1; contador <= largo; contador++) {
       int nota = (int) (Math.random() * 7);
       
-
       switch (nota) {
       case 0:
         nombreNota = "do ";
@@ -43,16 +43,22 @@ public class Ejercicio015 {
         break;
       default:
       }
+
+      if (contador == 1) {
+        primeraNota = nombreNota;
+      }
+
+      if (contador == largo) {
+        nombreNota = primeraNota;
+      }
+
       System.out.print(nombreNota);
 
-      /* for(int j = 1; j <= 28; j++) {
-          int largo = ((int) (Math.random() * 25) + 4);
-
-          if (largo % 4 == 0) { 
-          System.out.print();
-          }
-      }  */
-    }
-    System.out.println();
-  }
+      if (contador == largo){
+        System.out.print("||");
+      } else if (contador % 4 == 0) { 
+        System.out.print("| ");
+      }
+    }  
+  }    
 }
