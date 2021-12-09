@@ -12,11 +12,33 @@ public class Ejercicio05_07 {
     System.out.println("Introduce 10 números:");
 
     int[] numeros = new int[10];
+    int maximo = Integer.MIN_VALUE;
+    int minimo = Integer.MAX_VALUE;
     int i;
 
     for (i = 0; i < 10; i++) {
       numeros[i] = Integer.parseInt(System.console().readLine());
+
+      if (numeros[i] < minimo){
+        minimo = numeros[i];
+      }
+
+      if (numeros[i] > maximo){
+        maximo = numeros[i];
+      }
     }
-    
+
+    System.out.println();
+    System.out.println("Los numeros son:");
+    for (i = 0; i < 10; i++) {
+      System.out.print(numeros[i]);
+      if (numeros[i] == minimo) {
+        System.out.print(" minimo");
+      }
+      if (numeros[i] == maximo) {
+        System.out.print(" maximo");
+      }
+      System.out.println();
+    }
   }
 }
