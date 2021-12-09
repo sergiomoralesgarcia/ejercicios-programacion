@@ -7,26 +7,20 @@
  */
 public class Ejercicio03_07 {
   public static void main(String[] args) {
+
     System.out.println("Este programa te muestra los número que introduzcas por teclado en el orden contrario");
     System.out.println("Introduzca 10 números:");
-    double numeros = Double.parseDouble(System.console().readLine());
+    
+    int[] numeros = new int[10];
+    int i;
 
-    double[] teclado = new double[10];
+    for (i = 0; i < 10; i++) {
+      numeros[i] = Integer.parseInt(System.console().readLine());
+    }
 
-    teclado[0] = numeros;
-    teclado[1] = numeros;
-    teclado[2] = numeros;
-    teclado[3] = numeros;
-    teclado[4] = numeros;
-    teclado[5] = numeros;
-    teclado[6] = numeros;
-    teclado[7] = numeros;
-    teclado[8] = numeros;
-    teclado[9] = numeros;
-
-    // ESTE FOR MUESTRA TANTO LOS VALORES INTRODUCIDOS ANTERIORMENTE COMO LOS QUE NO
-    for (int i = 0; i > 10; i--) {
-      System.out.println("Posición[" + i + "]: " + numeros);
+    System.out.println("Los números mostrados en orden contrario son:");
+    for (i = 9; i >= 0; i--) {
+      System.out.println(numeros[i]);
     }
   }
 }
