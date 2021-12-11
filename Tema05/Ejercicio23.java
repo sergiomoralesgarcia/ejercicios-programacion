@@ -8,8 +8,8 @@
  */
 public class Ejercicio23 {
   public static void main(String[] args) {
-    System.out.println("Vaya introduciendo números.");
     System.out.println("Se parará cuando la suma total no supere los 1000.");
+    System.out.println("Vaya introduciendo números:");
 
     int numeroIntroducido;
     int suma = 0;
