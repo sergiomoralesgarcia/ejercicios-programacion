@@ -20,7 +20,7 @@ public class Ejercicio13 {
         negativos++;
       }
     }
-
+    
     System.out.println("La cantidad de números positivos es " + positivos + " y de negativos es " + negativos);
   }
 }

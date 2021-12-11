@@ -11,7 +11,7 @@ public class Ejercicio14 {
     int base = Integer.parseInt(System.console().readLine());
     System.out.println("Introduzca el exponente: ");
     int exponente = Integer.parseInt(System.console().readLine());
-    int potencia = 0;
+    int potencia = 1;
 
     if (exponente == 0) {
       potencia = 1;
@@ -29,7 +29,7 @@ public class Ejercicio14 {
     }
 
     System.out.println("La potencia es " + potencia);
-      
+
   }
 }
       
