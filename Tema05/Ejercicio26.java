@@ -30,7 +30,7 @@ public class Ejercicio26 {
       numero /= 10;
       longitud++;
     } // while
-        
+    
     // comprueba la posición
     while (volteado > 0) {
       if ((volteado % 10) == digito) {
