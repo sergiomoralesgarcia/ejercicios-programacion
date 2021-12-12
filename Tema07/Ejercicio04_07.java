@@ -25,7 +25,7 @@ public class Ejercicio04_07 {
       cubo[i] = numero[i] * numero[i] * numero[i];
     }
 
-    System.out.println("───────────────────────\n│  n  │   n²  │    n³  │\n│─────┼───────┼────────│");
+    System.out.println("│  n  │   n²  │    n³  │\n│─────┼───────┼────────│");
     for (i = 0; i < 20; i++) {
       System.out.printf("│%4d │ %5d │%8d│\n", numero[i], cuadrado[i], cubo[i]);
     }

@@ -19,11 +19,11 @@ public class EjercicioPrueba {
     precios[3] = 300;
     precios[4] = 400;
     
-    System.out.printf("%.2f", precios[0]);
-    System.out.printf("%.2f", precios[1]);
-    System.out.printf("%.2f", precios[2]);
-    System.out.printf("%.2f", precios[3]);
-    System.out.printf("%.2f", precios[4]);
+    System.out.printf("%.2f ", precios[0]);
+    System.out.printf("%.2f ", precios[1]);
+    System.out.printf("%.2f ", precios[2]);
+    System.out.printf("%.2f ", precios[3]);
+    System.out.printf("%.2f ", precios[4]);
 
 
     System.out.println();
