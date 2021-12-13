@@ -1,48 +1,97 @@
 /**
- * Realiza un programa que pinte por pantalla una pecera con un pececito dentro.
- * Se debe pedir al usuario el ancho y el alto de la pecera, que como mínimo
- * serán de 4 unidades. No hay que comprobar que los datos se introducen
- * correctamente; podemos suponer que el usuario los introduce bien. Dentro de
- * la pecera hay que colocar de forma aleatoria un pececito, que puede estar
- * situado en cualquiera de las posiciones que quedan en el hueco que forma el
- * rectángulo.
+ * Sinestesio y Casilda van a pintar los tres dormitorios de su casa, quieren
+ * sustituir el color blanco por colores más alegres. Realiza un programa que
+ * genere de forma aleatoria una secuencia de tres colores aleatorios (uno para
+ * cada dormitorio) de tal forma que no se repita ninguno. Los colores entre los
+ * que debe elegir el programa son los siguientes: rojo, azul, verde, amarillo,
+ * violeta y naranja.
  *
+ * 
  * @author Sergio Morales García
  * 
  */
 public class Ejercicio018 {
   public static void main(String[] args) {
-    System.out.println("Por favor, introduzca la altura de la pecera (como mínimo 4): ");
-    int altura = Integer.parseInt(System.console().readLine());
-    System.out.print("Ahora introduzca la anchura (como mínimo 4): ");
-    int anchura = Integer.parseInt(System.console().readLine());
-
-    int posicion = 0;
-    int posicionPez = (int) (Math.random() * (altura - 2) * (anchura - 2));
-
-    // Pinta la parte superior /////////////////////////////////////////////////
-    for (int i = 0; i < anchura; i++) {
-      System.out.print("* ");
+    System.out.println("El programa genera de forma aleatoria una secuencia de tres colores aleatorios ");
+    System.out.println(" ");
+    String colorTipo1="";
+    String colorTipo2="";
+    String colorTipo3="";
+    int color=0;
+    int i = 0;
+    boolean repetir = true;
+    while (repetir){
+      repetir = false;
+      color = (int)(Math.random()*6)+1;
+      i++;
+      switch (color){
+        case 1:
+          if( i == 1){
+          colorTipo1="rojo";
+          }else if (i == 2){
+          colorTipo2="rojo";
+          }else{
+          colorTipo3="rojo";
+          }
+        break; 
+        case 2:
+          if( i == 1){
+            colorTipo1="azul";
+          }else if (i == 2){
+            colorTipo2="azul";
+          }else{
+            colorTipo3="azul";
+          }
+        break; 
+        case 3:
+          if( i == 1){
+            colorTipo1="verde";
+          }else if (i == 2){
+            colorTipo2="verde";
+          }else{
+            colorTipo3="verde";
+          }
+        break; 
+        case 4:
+          if( i == 1){
+            colorTipo1="amarillo";
+          }else if (i == 2){
+            colorTipo2="amarillo";
+          }else{
+            colorTipo3="amarillo";
+          }
+        break;
+        case 5:
+          if( i == 1){
+            colorTipo1="violeta";
+          }else if (i == 2){
+            colorTipo2="violeta";
+          }else{
+            colorTipo3="violeta";
+          }
+        break;
+        case 6:
+          if( i == 1){
+            colorTipo1="naranja";
+          }else if (i == 2){
+            colorTipo2="naranja";
+          }else{
+            colorTipo3="naranja";
+          }
+        break;
+        default:
+      }
+      if ((colorTipo1.equals(colorTipo2))||(colorTipo1.equals(colorTipo3))){
+        repetir=true;
+      }else if((colorTipo2.equals(colorTipo1))||(colorTipo2.equals(colorTipo3))){
+        repetir=true;
+      }else if((colorTipo3.equals(colorTipo1))||(colorTipo3.equals(colorTipo2))){
+        repetir=true;
+      }else if ( i < 3){
+        repetir=true;
+      }
+      
     }
-    System.out.println();
-
-    // Pinta la parte central //////////////////////////////////////////////////
-    for (int i = 2; i < altura; i++) {
-      System.out.print("*"); // parte izquierda de la pecera
-      for (int j = 2; j < anchura * 2 - 1; j++) {
-        if (posicion == posicionPez) {
-          System.out.print("&");
-        } else {
-          System.out.print(" ");
-        }
-        posicion++;
-      } // for j
-      System.out.println("*"); // parte derecha de la pecera
-    } // for i
-
-    // Pinta la parte inferior /////////////////////////////////////////////////
-    for (int i = 0; i < anchura; i++) {
-      System.out.print("* ");
-    }
+    System.out.println("El color de cada dormitorio sera: "+"1º dormitorio "+colorTipo1 + " 2º dormitorio " + colorTipo2 + " 3º dormitorio " +colorTipo3);
   }
 }
