@@ -5,34 +5,57 @@
  */
 public class Ejercicio37 {
   public static void main (String[] args) {
-    long num;
-    do {
-      System.out.print("Introduce un número entero positivo: ");
-      num = Integer.parseInt(System.console().readLine());
-    } while (num < 1);
-    System.out.print(num + " = ");
 
-    // Cuenta los números y calcula el reves
-    int aux = num;
-    int numDig = 0;
-    int numReves = 0;
-    while (aux > 0){
-      numReves = ((numReves*10) + (aux % 10));
-      aux /=10;
-      numDig++;
+    System.out.println("El programa nos un numero en un sistema de palotes (Ej: 12 = | - ||)");
+    System.out.print("Introduce un numero por teclado: ");
+    int numeroIntroducido = Integer.parseInt(System.console().readLine()) ;
+    int numero = numeroIntroducido;
+    int voltear = 0 ;
+    System.out.print("El"+numero+" en decimal es el ");
+    
+    /**Sacar cifra del numero**/
+    while (numero > 0){
+      
+      voltear = (voltear * 10) + (numero %10);
+      numero/=10;
     }
-    int cifra = 0;
-    // Separa las cifras y escribe los palitos
-    for (int i = 0; i < numDig; i++){
-      cifra = numReves%10;
-      numReves /= 10;
-      for (int j = 0; j < cifra; j++){
-        System.out.print("|");
-      }
-      if (i < numDig-1){
-        System.out.print("-");
-      }
+    while (voltear > 0){
+      int cifra = voltear % 10;
+      switch (cifra){
+        case 1:
+          System.out.print(" | -");
+        break;
+        case 2:
+          System.out.print(" || -");
+        break;
+        case 3:
+          System.out.print(" ||| -");
+        break;
+        case 4:
+          System.out.print(" |||| -");
+        break;
+        case 5:
+          System.out.print(" ||||| -");
+        break;
+        case 6:
+          System.out.print(" |||||| -");
+        break;
+        case 7:
+          System.out.print(" ||||||| -");
+        break;
+        case 8:
+          System.out.print(" |||||||| -");
+        break;
+        case 9:
+          System.out.print(" ||||||||| -");
+        break;
+        default:
+        System.out.print("  -");
+        break;
+        } 
+      voltear /= 10;
     }
+    System.out.print(" en el sistema palotes. ");
   }
 }
 
