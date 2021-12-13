@@ -1,13 +1,13 @@
 /**
- * Realiza un programa que sea capaz de recolocar los números de un array de
- * fuera hacia adentro. En primer lugar, el programa pedirá al usuario el tamaño
- * del array. A continuación generará un array con ese tamaño con números
- * enteros aleatorios entre 0 y 200 ambos incluidos. Seguidamente el programa
- * irá colocando desde fuera hacia adentro los números de tal forma que el
- * primero se coloca en la primera posición, el segundo en la última, el tercero
- * en la segunda, el cuarto en la penúltima, el quinto en la tercera, en sexto
- * en la antepenúltima, etc. Se debe mostrar por pantalla tanto el array original 
- * como el array resultado.
+ * Realiza una versión del programa “Hola mundo”.Se debe mostrar la palabra HOLA
+ * (todo en mayúsculas) hecha con asteriscos.La altura de la palabra debe ser un
+ * número impar generado al azar entre el 3 y el 13 ambos incluidos.Los palos 
+ * horizontales de la H y de la A están justo a la mitad de la altura. La anchura
+ * de las letras siempre es la misma. Aunque, en este caso , sólo hay 6 posibles
+ * HOLAs de distinta altura,el programa debe hacerse de tal forma que sea muy 
+ * fácil adaptarlo a otros rangos de altura, por ej. entre 7 y 33. Por tanto, no 
+ * se da por válido escribir 6 sentencias if, cada una pintando la correspondien
+ * te figura completa.
  * 
  * @author Sergio Morales García
  * 

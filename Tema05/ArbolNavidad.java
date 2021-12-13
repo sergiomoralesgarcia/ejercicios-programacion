@@ -4,56 +4,88 @@
  */
 public class ArbolNavidad {
   public static void main(String[] args) {
-    System.out.println("Este programa dibuja un árbol de navidad.");
+    System.out.println("Este programa pinta un árbol de Navidad.");
     System.out.print("Por favor, introduzca la altura: ");
-    int tronco = Integer.parseInt(System.console().readLine());
-    int altura = tronco - 4;
-    int pisos = 1;
-    int espacios = altura - 1;
-    int recorte = altura - 1;
-    int base = 1;
+    int altura = Integer.parseInt(System.console().readLine());
 
-    for (int j = 1; j <= tronco - 3; j++){
+    // Estrella ///////////////////////////////////////////
+
+    // Espacios a la izquierda de la estrella
+    for (int i = 0; i < altura; i++) {
       System.out.print(" ");
     }
-    System.out.print("⭐\n");
-    while (pisos <= altura) {
-      //for (int i = 1; i <= 1; i++) {
-      //} 
-      for (int i = 1; i <= espacios; i++) {
-        System.out.print(" ");
-        
-      }
-      System.out.print("  /");
-      espacios--;
+    System.out.println("🌟");
 
+    ///////////////////////////////////////////////////////
 
-      for (int c = 1; c <= recorte - espacios; c++) {
+    // Cuerpo del árbol ///////////////////////////////////
+
+    int espaciosIzquierda = altura;
+    int espaciosCentrales = 0;
+
+    for (int i = 1; i < altura - 3; i++) {
+
+      // Espacios a la izquierda del cuerpo del árbol
+      for (int j = 0; j < espaciosIzquierda; j++) {
         System.out.print(" ");
       }
-      System.out.print("/");
-      recorte+=1;
 
-      for (int d = 1; d <= base - recorte - espacios; d++) {
-        System.out.print("/");
+      // Borde izquierdo
+      System.out.print("\033[32m/");
+
+      // Centro
+      for (int j = 0; j < espaciosCentrales; j++) {
+        switch ((int) (Math.random() * 8)) {
+        case 0:
+          System.out.print("\033[31m*");
+          break;
+        case 1:
+          System.out.print("\033[37m@");
+          break;
+        case 2:
+          System.out.print("\033[36m*");
+          break;
+        case 3:
+          System.out.print("\033[34m@");
+          break;
+        default:
+          System.out.print(" ");
+        }
       }
 
-      System.out.println();
-      pisos++;
-      base += 2;
-      
-    }
-    //longitud += 2;
+      // Borde derecho
+      System.out.println("\033[32m\\");
 
-    for (int j = 1; j <= tronco - 3; j++){
+      espaciosIzquierda--;
+      espaciosCentrales += 2;
+    }
+
+    // Base del árbol
+
+    // Espacios a la izquierda de la base
+    for (int j = 0; j < espaciosIzquierda; j++) {
       System.out.print(" ");
     }
-    System.out.print(" #\n");
 
-    for (int j = 1; j <= tronco - 3; j++){
+    // Base
+    System.out.print("\033[32m/");
+    for (int i = 0; i < espaciosCentrales; i++) {
+      System.out.print("-");
+    }
+    System.out.println("\\");
+
+    ///////////////////////////////////////////////////////
+
+    // Tronco ///////////////////////////////////
+
+    for (int i = 0; i < altura; i++) {
       System.out.print(" ");
     }
-    System.out.print(" #");
+    System.out.println("\033[33m#");
 
+    for (int i = 0; i < altura; i++) {
+      System.out.print(" ");
+    }
+    System.out.println("\033[33m#");
   }
 }
