@@ -10,12 +10,15 @@ public class Ejer01_07 {
   public static void main(String[] args)
       throws InterruptedException { // Se añade esta línea para poder usar sleep
 
-    int[][] n = new int[3][2]; // array de 3 filas por 2 columnas
+    int[][] n = new int[3][6]; // array de 3 filas por 2 columnas
 
-    n[0][0] = 20;
-    n[1][0] = 67;
-    n[1][1] = 33;
-    n[2][1] = 7;
+    n[0][1] = 30;
+    n[0][2] = 2;
+    n[0][5] = 5;
+    n[1][1] = 75;
+    n[2][2] = -2;
+    n[2][3] = 9;
+    n[2][5] = 11;
 
     int fila;
     int columna;
