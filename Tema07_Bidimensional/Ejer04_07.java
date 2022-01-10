@@ -6,8 +6,8 @@
  * @author Sergio Morales García
  */
 public class Ejer04_07 {
-  public static void main(String[] args) {
-    ;
+  public static void main(String[] args) 
+    throws InterruptedException {
 
     int[][] n = new int[4][5];
 
@@ -26,8 +26,10 @@ public class Ejer04_07 {
       for (columna = 0; columna < 5; columna++) {
         System.out.printf("%8d  ", n[fila][columna]);
         sumaFila += n[fila][columna];
+        Thread.sleep(100);
       }
       System.out.printf("|%8d\n", sumaFila);
+      Thread.sleep(700);
     }
 
     // Se muestran las columnas
@@ -46,6 +48,7 @@ public class Ejer04_07 {
 
       sumaTotal += sumaColumna;
       System.out.printf("%7d   ", sumaColumna);
+      Thread.sleep(500);
     }
     System.out.printf("|%7d   ", sumaTotal);
   }
