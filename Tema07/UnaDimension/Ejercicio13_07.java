@@ -32,7 +32,7 @@ public class Ejercicio13_07 {
       System.out.print(elemento + " ");
     }
     
-    System.out.print("\n\n¿Qué quiere destacar? (1 – mínimo, 2 – máximo): ");
+    System.out.print("\n\n¿Qué quiere ver? (1 - pares, 2 - capicúas, 3 - primos): ");
     int opcion = Integer.parseInt(System.console().readLine());
 
     int destacado; // número que se va a destacar del resto
