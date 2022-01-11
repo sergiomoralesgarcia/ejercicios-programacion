@@ -13,15 +13,26 @@ public class Ejer05_07 {
     int columna;
     int maximo = 0;
     int minimo = 1000;
-    int maximoFila;
-    int maximoColumna;
-    int minimoFila;
-    int minimoColumna;
+    int maximoFila = 0;
+    int maximoColumna = 0;
+    int minimoFila = 0;
+    int minimoColumna = 0;
 
     // Se generan números aleatorios
     for (fila = 0; fila < 6; fila++) {
       for (columna = 0; columna < 10; columna++) {
         num[fila][columna] = (int) (Math.random() * 1001);
+        if (num[fila][columna] < minimo) {
+          minimo = num[fila][columna];
+          minimoFila = fila;
+          minimoColumna = columna;
+        }
+        
+        if (num[fila][columna] > maximo) {
+          maximo = num[fila][columna];
+          maximoFila = fila;
+          maximoColumna = columna;
+        }
       }
     }
 
@@ -32,22 +43,8 @@ public class Ejer05_07 {
       for (columna = 0; columna < 10; columna++) {
         System.out.printf("%5d  ", num[fila][columna]);
         sumaFila += num[fila][columna];
-        // Calcula el mínimo y guarda sus coordenadas
-        if (num[fila][columna] < minimo) {
-          minimo = num[fila][columna];
-          minimoFila = fila;
-          minimoColumna = columna;
-        }
-        
-        // Calcula el máximo y guarda sus coordenadas
-        if (num[fila][columna] > maximo) {
-          maximo = num[fila][columna];
-          maximoFila = fila;
-          maximoColumna = columna;
-        }
       }
       System.out.printf("|%5d\n", sumaFila);
-      
     }
 
     // Se muestran las columnas
@@ -69,7 +66,7 @@ public class Ejer05_07 {
     System.out.printf("| %5d  ", sumaTotal);
 
 
-    System.out.println("El numero máximo es el " + maximo + "y se encuentra en la fila " + maximoFila + "y en la columna " + maximoColumna);
-    System.out.println("El numero mínimo es el " + minimo + "y se encuentra en la fila " + minimoFila + "y en la columna " + minimoColumna);
+    System.out.println("El numero máximo es el " + maximo + " y se encuentra en la fila " + maximoFila + "y en la columna " + maximoColumna);
+    System.out.println("El numero mínimo es el " + minimo + " y se encuentra en la fila " + minimoFila + "y en la columna " + minimoColumna);
   }
 }
