@@ -31,7 +31,7 @@ public class Ejer01_07 {
 
       for (columna = 0; columna < 6; columna++) {
         System.out.printf("%10d ", n[fila][columna]);
-        Thread.sleep(1000); // retardo de un segundo
+        Thread.sleep(500); // retardo de un segundo
       }
       System.out.println();
     }
