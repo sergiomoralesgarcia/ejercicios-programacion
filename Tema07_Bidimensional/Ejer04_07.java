@@ -15,9 +15,11 @@ public class Ejer04_07 {
     int columna;
 
     // Se introducen números aleatorios
-    for (fila = 0; fila < 4; fila++)
-      for (columna = 0; columna < 5; columna++)
+    for (fila = 0; fila < 4; fila++){
+      for (columna = 0; columna < 5; columna++){
         n[fila][columna] = (int) (Math.random() * 900) + 100;
+      }
+    }
 
     // Se muestran las filas
     int sumaFila;

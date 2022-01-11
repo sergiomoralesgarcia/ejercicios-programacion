@@ -7,7 +7,7 @@
  * @author Sergio Morales García
  */
 public class Ejer02_07 {
-  public static void main(String[] args){;
+  public static void main(String[] args){
 
     int[][] n = new int[4][5]; 
 
@@ -47,7 +47,6 @@ public class Ejer02_07 {
       for(fila = 0; fila < 4; fila++) {
         sumaColumna += n[fila][columna];
       }
-
       sumaTotal += sumaColumna;
       System.out.printf("%7d   ", sumaColumna);
     }

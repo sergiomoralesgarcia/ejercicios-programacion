@@ -4,18 +4,18 @@
  * 
  * @author Sergio Morales García
  */
-public class Ejer03_07 {
+public class Ejer05_07 {
   public static void main(String[] args) {
 
-    int[][] n = new int[4][5];
+    int[][] n = new int[6][10];
 
     int fila;
     int columna;
 
     // Se generan números aleatorios
-    for(fila = 0; fila < 4; fila++){
-      for(columna = 0; columna < 5; columna++){
-        n[fila][columna] = (int)(Math.random() * 900) + 100;
+    for (fila = 0; fila < 4; fila++) {
+      for (columna = 0; columna < 5; columna++) {
+        n[fila][columna] = (int) (Math.random() * 1001);
       }
     }
 
