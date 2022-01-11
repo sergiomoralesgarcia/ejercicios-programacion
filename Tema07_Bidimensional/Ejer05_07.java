@@ -7,45 +7,69 @@
 public class Ejer05_07 {
   public static void main(String[] args) {
 
-    int[][] n = new int[6][10];
+    int[][] num = new int[6][10];
 
     int fila;
     int columna;
+    int maximo = 0;
+    int minimo = 1000;
+    int maximoFila;
+    int maximoColumna;
+    int minimoFila;
+    int minimoColumna;
 
     // Se generan números aleatorios
-    for (fila = 0; fila < 4; fila++) {
-      for (columna = 0; columna < 5; columna++) {
-        n[fila][columna] = (int) (Math.random() * 1001);
+    for (fila = 0; fila < 6; fila++) {
+      for (columna = 0; columna < 10; columna++) {
+        num[fila][columna] = (int) (Math.random() * 1001);
       }
     }
 
     // Se muestran las filas
     int sumaFila;
-    for (fila = 0; fila < 4; fila++) {
+    for (fila = 0; fila < 6; fila++) {
       sumaFila = 0;
-      for (columna = 0; columna < 5; columna++) {
-        System.out.printf("%8d  ", n[fila][columna]);
-        sumaFila += n[fila][columna];
+      for (columna = 0; columna < 10; columna++) {
+        System.out.printf("%5d  ", num[fila][columna]);
+        sumaFila += num[fila][columna];
+        // Calcula el mínimo y guarda sus coordenadas
+        if (num[fila][columna] < minimo) {
+          minimo = num[fila][columna];
+          minimoFila = fila;
+          minimoColumna = columna;
+        }
+        
+        // Calcula el máximo y guarda sus coordenadas
+        if (num[fila][columna] > maximo) {
+          maximo = num[fila][columna];
+          maximoFila = fila;
+          maximoColumna = columna;
+        }
       }
-      System.out.printf("|%8d\n", sumaFila);
+      System.out.printf("|%5d\n", sumaFila);
+      
     }
 
     // Se muestran las columnas
-    for (columna = 0; columna < 5; columna++) {
-      System.out.print("----------");
+    for (columna = 0; columna < 6; columna++) {
+      System.out.print("-----------");
     }
     System.out.println("-----------");
 
     int sumaColumna;
     int sumaTotal = 0;
-    for (columna = 0; columna < 5; columna++) {
+    for (columna = 0; columna < 10; columna++) {
       sumaColumna = 0;
-      for (fila = 0; fila < 4; fila++) {
-        sumaColumna += n[fila][columna];
+      for (fila = 0; fila < 6; fila++) {
+        sumaColumna += num[fila][columna];
       }
       sumaTotal += sumaColumna;
-      System.out.printf("%7d   ", sumaColumna);
+      System.out.printf("%5d  ", sumaColumna);
     }
-    System.out.printf("|%7d   ", sumaTotal);
+    System.out.printf("| %5d  ", sumaTotal);
+
+
+    System.out.println("El numero máximo es el " + maximo + "y se encuentra en la fila " + maximoFila + "y en la columna " + maximoColumna);
+    System.out.println("El numero mínimo es el " + minimo + "y se encuentra en la fila " + minimoFila + "y en la columna " + minimoColumna);
   }
 }
