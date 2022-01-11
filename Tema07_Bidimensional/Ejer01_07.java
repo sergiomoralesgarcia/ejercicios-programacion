@@ -24,6 +24,7 @@ public class Ejer01_07 {
     int columna;
 
     System.out.println("           Columna 0  Columna 1  Columna 2  Columna 3  Columna 4  Columna 5");
+    System.out.println("----------------------------------------------------------------------------");
     for (fila = 0; fila < 3; fila++) {
 
       System.out.print("Fila " + fila);
