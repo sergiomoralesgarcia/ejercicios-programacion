@@ -49,9 +49,9 @@ public class Ejer04_07 {
       }
 
       sumaTotal += sumaColumna;
-      System.out.printf("%7d   ", sumaColumna);
+      System.out.printf("%8d  ", sumaColumna);
       Thread.sleep(500);
     }
-    System.out.printf("|%7d   ", sumaTotal);
+    System.out.printf("|%8d ", sumaTotal);
   }
 }

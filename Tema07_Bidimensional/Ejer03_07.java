@@ -44,8 +44,8 @@ public class Ejer03_07 {
         sumaColumna += n[fila][columna];
       }
       sumaTotal += sumaColumna;
-      System.out.printf("%7d   ", sumaColumna);
+      System.out.printf("%8d  ", sumaColumna);
     }
-    System.out.printf("|%7d   ", sumaTotal);
+    System.out.printf("|%8d ", sumaTotal);
   }
 }
