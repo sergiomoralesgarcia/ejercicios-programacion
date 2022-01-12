@@ -65,8 +65,10 @@ public class Ejer05_07 {
     }
     System.out.printf("| %5d  ", sumaTotal);
 
-
-    System.out.println("El numero máximo es el " + maximo + " y se encuentra en la fila " + maximoFila + "y en la columna " + maximoColumna);
-    System.out.println("El numero mínimo es el " + minimo + " y se encuentra en la fila " + minimoFila + "y en la columna " + minimoColumna);
+    System.out.println();
+    System.out.println();
+    
+    System.out.println("El numero máximo es el " + maximo + " y se encuentra en la fila " + maximoFila + " y en la columna " + maximoColumna);
+    System.out.println("El numero mínimo es el " + minimo + " y se encuentra en la fila " + minimoFila + " y en la columna " + minimoColumna);
   }
 }
