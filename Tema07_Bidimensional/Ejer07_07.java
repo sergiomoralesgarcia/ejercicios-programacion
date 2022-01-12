@@ -1,47 +1,58 @@
 /**
  * Mejora el juego “Busca el tesoro” de tal forma que si hay una mina a una
- * casilla de distancia, el programa avise diciendo ¡Cuidado! ¡Hay una mina cerca!
+ * casilla de distancia, el programa avise diciendo ¡Cuidado! ¡Hay una mina
+ * cerca!
  * 
  * @author Sergio Morales García
  */
 public class Ejer07_07 {
+  // Se definen constantes para representar el contenido de las celdas
+  static final int VACIO = 0;
+  static final int MINA = 1;
+  static final int TESORO = 2;
+  static final int INTENTO = 3;
+
   public static void main(String[] args) {
 
-    final int VACIO = 0;
-    final int MINA = 1;
-    final int TESORO = 2;
-    final int INTENTO = 3;
+    int[][] cuadrante = new int[5][4];
 
     int x;
     int y;
-    int[][] cuadrante = new int[5][4];
 
-    // inicializa el array
+    // Inicializa el array
     for (x = 0; x < 4; x++) {
       for (y = 0; y < 3; y++) {
         cuadrante[x][y] = VACIO;
       }
     }
-    // coloca la mina
-    int minaX = (int) (Math.random() * 5);
-    int minaY = (int) (Math.random() * 4);
-    cuadrante[minaX][minaY] = MINA;
 
-    // coloca el tesoro
+    // Coloca la mina
+    int minaX = (int) (Math.random() * 4);
+    int minaY = (int) (Math.random() * 3);
+
+    cuadrante[minaX][minaY] = MINA;
+    // Para depuración:
+    // System.out.println(minaX + ", " + minaY);
+
+    // Coloca el tesoro
     int tesoroX;
     int tesoroY;
+
     do {
-      tesoroX = (int) (Math.random() * 5);
-      tesoroY = (int) (Math.random() * 4);
+      tesoroX = (int) (Math.random() * 4);
+      tesoroY = (int) (Math.random() * 3);
     } while ((minaX == tesoroX) && (minaY == tesoroY));
+
     cuadrante[tesoroX][tesoroY] = TESORO;
 
-    // juego
+    // Juego
     System.out.println("¡BUSCA EL TESORO!");
+
     boolean salir = false;
     String c = "";
+
     do {
-      // pinta el cuadrante
+      // Pinta el cuadrante
       for (y = 3; y >= 0; y--) {
         System.out.print(y + "|");
         for (x = 0; x < 5; x++) {
@@ -55,30 +66,31 @@ public class Ejer07_07 {
       }
       System.out.println("  ----------\n  0 1 2 3 4\n");
 
-      // pide las coordenadas
+      // Pide las coordenadas
       System.out.print("Coordenada x: ");
       x = Integer.parseInt(System.console().readLine());
       System.out.print("Coordenada y: ");
       y = Integer.parseInt(System.console().readLine());
 
-      // mira lo que hay en las coordenadas indicadas por el usuario
+      // Mira lo que hay en las coordenadas indicadas por el usuario
       switch (cuadrante[x][y]) {
         case VACIO:
           cuadrante[x][y] = INTENTO;
+          if ((Math.abs(x - minaX) < 2) && (Math.abs(y - minaY) < 2)) {
+            System.out.println("Cuidado, hay una mina cerca.");
+          }
           break;
         case MINA:
           System.out.println("Lo siento, has perdido.");
           salir = true;
           break;
         case TESORO:
-          System.out.println("¡Enhorabuena! ¡Has encontrado el tesoro!");
+          System.out.println("Enhorabuena, has encontrado el tesoro.");
           salir = true;
-          break;
-        default:
       }
     } while (!salir);
 
-    // pinta el cuadrante
+    // Pinta el cuadrante
     for (y = 3; y >= 0; y--) {
       System.out.print(y + " ");
       for (x = 0; x < 5; x++) {
@@ -93,9 +105,8 @@ public class Ejer07_07 {
             c = "€ ";
             break;
           case INTENTO:
-            c = "X ";
+            c = "x ";
             break;
-          default:
         }
         System.out.print(c);
       }
