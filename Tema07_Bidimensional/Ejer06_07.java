@@ -36,25 +36,6 @@ public class Ejer06_07 {
       }
     }
 
-/*    // Se generan números aleatorios
-    for (fila = 0; fila < 6; fila++) {
-      for (columna = 0; columna < 10; columna++) {
-        num[fila][columna] = (int) (Math.random() * 1001);
-        
-        if (num[fila][columna] < minimo) {
-          minimo = num[fila][columna];
-          minimoFila = fila;
-          minimoColumna = columna;
-        }
-
-        if (num[fila][columna] > maximo) {
-          maximo = num[fila][columna];
-          maximoFila = fila;
-          maximoColumna = columna;
-        }
-      }
-    } */
-
     // Se muestran las filas
     int sumaFila;
     for (fila = 0; fila < 6; fila++) {
