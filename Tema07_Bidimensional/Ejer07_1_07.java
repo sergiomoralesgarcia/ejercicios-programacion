@@ -31,19 +31,21 @@ public class Ejer07_1_07 {
 
     int tesoroX;
     int tesoroY;
-    
+    // do{
     tesoroX = (int)(Math.random() * 5);
     tesoroY = (int)(Math.random() * 4);
     tablero[tesoroX][tesoroY] = 2;
+    // } while ((minaX == tesoroX) && (minaY == tesoroY));
+
+    // Se inicia el juego 
+    System.out.println("¡BUSCA EL TESORO!");
+    
 
     // Se coloca el tablero 
 
-    int coordenadaX;
-    int coordenadaY;
-
-    for (coordenadaX = 3; coordenadaX >= 0; coordenadaX-- ){
-      System.out.print(coordenadaX + "|");
-      for (coordenadaY = 0; coordenadaY < 5; coordenadaY++){
+    for (x = 3; x >= 0; x-- ){
+      System.out.print(x + "|");
+      for (y = 0; y < 5; y++){
         if (tablero[x][y] == 3){
           System.out.print("X");
         } else {
@@ -55,6 +57,12 @@ public class Ejer07_1_07 {
     System.out.println("  ----------");
     System.out.println("  0 1 2 3 4 ");
 
+    // Se piden las coordenadas 
+
+    System.out.println("Introduzca la coordenada x:");
+    x = Integer.parseInt(System.console().readLine());
+    System.out.println("Introduzca la coordenada y:");
+    y = Integer.parseInt(System.console().readLine());
 
   }
 }
