@@ -36,6 +36,7 @@ public class Ejer06_07 {
       }
     }
 
+
     // Se muestran las filas
     int sumaFila;
     for (fila = 0; fila < 6; fila++) {
