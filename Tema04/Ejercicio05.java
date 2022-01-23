@@ -1,19 +1,19 @@
 /**
- * Realiza un programa que resuelva una ecuaci贸n de primer grado 
+ * Realiza un programa que resuelva una ecuaci髇 de primer grado 
  * (del tipo ax+b = 0).
  *
- * @author Sergio Morales Garc铆a
+ * @author Sergio Morales Garc韆
  */
 public class Ejercicio05 {
   public static void main(String[] args) {
-    System.out.println("Este programa resuelve la ecuaci贸n ax + b = 0");
+    System.out.println("Este programa resuelve la ecuaci髇 ax + b = 0");
     System.out.print("Introduce el valor de a: ");
     double a = Double.parseDouble(System.console().readLine());
     System.out.print("Introduce el valor de b: ");
     double b = Double.parseDouble(System.console().readLine());
 
     if ( a == 0) {
-      System.out.printf("La ecuaci贸n no tiene soluci贸n");
+      System.out.printf("La ecuaci髇 no tiene soluci髇");
     } else {
       System.out.printf("El valor de x es " + (-b / a));
     }
