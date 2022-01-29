@@ -8,7 +8,7 @@
 public class Ejer03_08{ 
   public static void main(String[] arg){
 
-    System.out.println(siguientePrimo(10435));
+    System.out.println(siguientePrimo(1374));
     
   }
 
