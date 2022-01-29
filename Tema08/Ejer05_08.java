@@ -8,7 +8,7 @@
 public class Ejer05_08 {
   public static void main(String[] arg){
 
-    System.out.println(digitos(367687697));
+    System.out.println(digitos(36697));
     
   }
 
