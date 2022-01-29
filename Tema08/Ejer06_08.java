@@ -1,7 +1,7 @@
 /**
  * 8. Funciones
  *
- * Ejercicio 5
+ * Ejercicio 6
  *
  * @author Sergio Morales García
  */
