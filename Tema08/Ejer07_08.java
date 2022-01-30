@@ -1,29 +1,16 @@
+import misfunciones.Funciones;
 /**
  * 8. Funciones
  *
- * Ejercicio 5
+ * Ejercicio 7
  *
  * @author Sergio Morales García
  */
 public class Ejer07_08 {
-  /* public static void main(String[] arg) {
+  public static void main(String[] arg) {
 
-    System.out.println(digitoN(36697));
+
+    System.out.println("El digito en esa posicion es: "+ misfunciones.Funciones.digitoN(345, 0));
 
   }
-
-  public static long digitoN(long x, int i) {
-
-    int n = i;
-        long numero = x;
-        long cifra = 0;
-        long voltear = Matematicas.voltea(numero);
-        cifra = (voltear % 10);
-        for (int comprobarPosicion = 0; comprobarPosicion < n; comprobarPosicion++){
-            voltear = voltear / 10;
-
-            cifra = (voltear % 10);
-        }
-        return (int) cifra;
-  } */
 }
