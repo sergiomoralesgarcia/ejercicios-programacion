@@ -23,6 +23,12 @@ public class DualGestion {
     System.out.println("Ejercicio 1");
     System.out.println("=============");
 
+    Caballo caballo1 = new Caballo("1,56 cm", "Paco ", "marrón ", "pienso ", "15 años");
+    Caballo caballo2 = new Caballo("Antonio", " negro ", " 7 años ");
+
+    caballo1.come();
+    caballo2.lame();
+
     
   }
 }
