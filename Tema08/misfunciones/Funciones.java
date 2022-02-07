@@ -112,17 +112,28 @@ public class Funciones {
     return (int) cifra;  
   }
 
-  public static long posicionDeDigito(int n, int digito) {
-  
-    int darLaVuelta = (Funciones.voltea(numero)); 
-    int posicion = 0;
-    int comprobarDigito = (darLaVuelta % 10);
+  public static int posicionDeDigito(int n, int digito) {
 
-    while ((comprobarDigito != digito) && (darLaVuelta > 0)) {
-      darLaVuelta = (darLaVuelta / 10);
-
-      comprobarDigito = (darLaVuelta % 10);
-
-      posicion++;
-    } 
+    int result = 0;
+    int nIntr = Funciones.voltea(n);
+    boolean trueResult = false; // verificar que result tenga un valor
+    int cifra = nIntr;
+    int cogNum = 0;
+    int contcif = 0;
+    for (int i = 1; i <= nIntr; i *= 10) {
+      cogNum = cifra % 10;
+      if (cogNum == digito) {
+        result = contcif;
+        trueResult = true;
+      }
+      cifra = (cifra - cogNum) / 10;
+      if (!trueResult) {
+        contcif++;
+      }
+    }
+    if (!trueResult) {
+      result = -1;
+    }
+    return result;
+  }
 }
