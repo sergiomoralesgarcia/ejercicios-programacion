@@ -29,6 +29,5 @@ public class DualGestion {
     caballo1.come();
     caballo2.lame();
 
-    
   }
 }
