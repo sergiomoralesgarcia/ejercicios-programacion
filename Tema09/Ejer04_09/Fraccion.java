@@ -1,3 +1,4 @@
+package Ejer04_09;
 import java.util.function.DoubleFunction;
 
 /**
