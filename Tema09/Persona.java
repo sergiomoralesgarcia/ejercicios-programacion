@@ -7,6 +7,18 @@ public class Persona {
   private int fechaNacimiento;
   private String domicilio;
 
+  private static int numeroTotalDeSaludos;
+
+
+  public void saluda() {
+    if (this.nombre == null){
+      System.out.println("Hola");
+    } else {
+      System.out.println("Hola soy " + this.nombre );
+    }
+    Persona.numeroTotalDeSaludos++;
+  }
+  
   public void saluda(String intensidad) {
     String chain = "Hola soy " + this.nombre;
     switch (intensidad) {
@@ -20,10 +32,7 @@ public class Persona {
       default:
     }
     System.out.println(chain);
-  }
-
-  public void saluda() {
-    System.out.println("Hola soy " + this.nombre);
+    Persona.numeroTotalDeSaludos++;
   }
 
   public void dimeNumero() {
@@ -42,4 +51,15 @@ public class Persona {
   public void setTelefono(String telefono) {
     this.telefono = telefono;
   }
+
+  public static int getNumeroTotalDeSaludos() {
+    return numeroTotalDeSaludos;
+  }
+
+  public static void setNumeroTotalDeSaludos(int numeroTotalDeSaludos) {
+    Persona.numeroTotalDeSaludos = numeroTotalDeSaludos;
+  }
+
+  
+  
 }

@@ -16,8 +16,10 @@ public class DualGestion {
     Profesor profe1 = new Profesor();
 
     alumno2.saluda();
-    profe1.explica();
+    alumno1.saluda();
     profe1.saluda();
+
+    System.out.println("Se ha saludado un total de " + Persona.getNumeroTotalDeSaludos() + " veces.");
 
     System.out.println("=============");
     System.out.println("Ejercicio 1");
