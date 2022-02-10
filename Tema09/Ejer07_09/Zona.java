@@ -1,3 +1,4 @@
+package Ejer07_09;
 /**
  * Queremos gestionar la venta de entradas (no numeradas) de Expocoches
  * Campanillas que tiene 3 zonas, la sala principal con 1000 entradas
