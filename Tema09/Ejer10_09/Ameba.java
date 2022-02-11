@@ -1,4 +1,5 @@
 package Ejer10_09;
+
 /**
  * Las amebas son seres unicelulares de forma cambiante ya que carecen de
  * pared celular. Fagocitan cualquier cosa que se les pone por delante. Crea la
