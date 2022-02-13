@@ -1,4 +1,5 @@
 package Ejer16_09;
+
 /**
  * Crea las clases Punto y Linea. De un punto se tienen que saber sus
  * coordenadas x e y, mientras que una línea está definida por dos puntos. 

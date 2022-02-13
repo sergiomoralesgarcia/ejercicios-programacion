@@ -1,4 +1,5 @@
 package Ejer16_09;
+
 class Linea {
   private Punto origen;
   private Punto fin;
