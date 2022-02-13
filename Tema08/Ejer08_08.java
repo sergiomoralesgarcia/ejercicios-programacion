@@ -9,7 +9,7 @@ import misfunciones.Funciones;
 public class Ejer08_08 {
   public static void main(String[] arg) {
 
-    System.out.println(misfunciones.Funciones.posicionDeDigito(12675, 5));
+    System.out.println(Funciones.posicionDeDigito(12675, 5));
 
   }
 }

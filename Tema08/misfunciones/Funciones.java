@@ -83,39 +83,37 @@ public class Funciones {
     return contCif;
   }
 
-  public static long voltea(long numeroIntroducido) {
-
-    long numero = numeroIntroducido;
-    long volteado = 0;
-
-    while (numero > 0) {
-      volteado = (volteado * 10) + (numero % 10);
-      numero /= 10;
-    } // while
-
-    return volteado;
-
-  }
-
-  public static long digitoN(long x, int i) {
-
-    int n = i;
-    long numero = x;
-    long cifra = 0;
-    long voltear = misfunciones.Funciones.voltea(numero);
-    cifra = (voltear % 10);
-    for (int comprobarPosicion = 0; comprobarPosicion < n; comprobarPosicion++){
-        voltear = voltear / 10;
-
-        cifra = (voltear % 10);
+  public static int voltea(int n) {
+    int inv = 0;
+    while (n > 0) {
+      inv = (inv * 10) + (n % 10);
+      n /= 10;
     }
-    return (int) cifra;  
+    return inv;
   }
+
+  public static long digitoN(int n, int posicion) {
+    n = voltea(n);
+    while (posicion-- > 0) {
+      n = n / 10;
+    }
+    return (int) n % 10;
+  }
+
+/**
+ * 8.
+ * Da la posición de la primera ocurrencia de un dígito
+ * dentro de un número entero. Si no se encuentra, devuelve -1.
+ * Las posiciones comienzan desde 0 hasta el numero mayor de digitos.
+ * 
+ * @param n      número a introducir
+ * @param digito dígito del cual obtendremos la posición
+ * @return posicion del dígito o -1 si no la encuentra
+ */
 
   public static int posicionDeDigito(int n, int digito) {
-
     int result = 0;
-    int nIntr = Funciones.voltea(n);
+    int nIntr = voltea(n);
     boolean trueResult = false; // verificar que result tenga un valor
     int cifra = nIntr;
     int cogNum = 0;
