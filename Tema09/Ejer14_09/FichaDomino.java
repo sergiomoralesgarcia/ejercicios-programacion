@@ -52,4 +52,6 @@ public class FichaDomino {
     System.out.println(f1.encaja(f3));
     System.out.println(f1.encaja(f2));
     }
+
+
 }
