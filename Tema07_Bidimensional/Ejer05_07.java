@@ -1,6 +1,8 @@
 /**
- * Modifica el programa anterior de tal forma que los números que se introducen
- * en el array se generen de forma aleatoria (valores entre 100 y 999).
+ * Realiza un programa que rellene un array de 6 filas por 10 columnas con
+ * números enteros positivos comprendidos entre 0 y 1000 (ambos incluidos). A
+ * continuación, el programa deberá dar la posición tanto del máximo como del
+ * mínimo.
  * 
  * @author Sergio Morales García
  */
